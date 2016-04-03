@@ -14,11 +14,6 @@ public class Zombie : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-	}
-
-	void OnCollisionEnter (Collision col)
-	{
-		print ("I'm Dying!!");
+		transform.position = Vector3.MoveTowards(transform.position, new Vector3(0f, transform.position.y, 0f), 0.01f);
 	}
 }
